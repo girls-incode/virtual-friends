@@ -12,8 +12,6 @@
     <td><%= friend.phone %></td>
     <td><%= friend.twitter %></td>
     <td><%= link_to "Show", friend %></td>
-    <% if false %>
-    <td><%= link_to "Edit", edit_friend_path(@friend) %></td>
-    <% end %>
-    <td><%= link_to "Delete", @friend, method: :delete %></td>
+    <td><%= link_to "Edit", edit_friend_path(friend) %></td>
+    <td><%= link_to "Delete", @friend, :confirm => "Are you sure?", :method => :delete %></td>
 </tr>

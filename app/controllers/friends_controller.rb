@@ -8,6 +8,8 @@ class FriendsController < ApplicationController
 
   # GET /friends/1 or /friends/1.json
   def show
+    # render template: "friends/#{params[:id]}"
+    @friend = Friend.find(params[:id])
   end
 
   # GET /friends/new
