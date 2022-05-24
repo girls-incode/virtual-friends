@@ -1,8 +1,7 @@
 <% if @friends.count > 0 %>
   <h1>Friends</h1>
   <table class="table table-striped table-bordered table-hover">
-    <caption>friends list</caption>
-    <thead class="thead-dark">
+    <thead class="bg-dark text-white">
       <tr>
         <th scope="col">#</th>
         <th scope="col">First name</th>
@@ -15,7 +14,9 @@
     </thead>
     <tbody>
       <% @friends.each_with_index do |friend, index| %>
-        <%= render friend, { :index => index, :friend => friend } %>
+        <% if friend.user == current_user %>
+          <%= render friend, { :index => index, :friend => friend } %>
+        <% end %>
       <% end %>
     </tbody>
   </table>

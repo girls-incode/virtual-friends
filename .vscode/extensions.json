@@ -1,13 +1,6 @@
 {
     "recommendations": [
-        "aliariff.vscode-erb-beautify",
-        "castwide.solargraph",
-        "hridoy.rails-snippets",
-        "misogi.ruby-rubocop",
-        "qwtel.sqlite-viewer",
-        "rebornix.ruby",
-        "sonarsource.sonarlint-vscode",
-        "vortizhe.simple-ruby-erb",
         "wingrunr21.vscode-ruby",
+        "rebornix.ruby"
     ]
 }
