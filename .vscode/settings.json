@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "*.erb": "erb"
+    },
+    // "ruby.intellisense": "rubyLocate",
+    // "ruby.useBundler": true, //run non-lint commands with bundle exec
+    // "ruby.useLanguageServer": true, // use the internal language server (see below)
+    // "ruby.lint": {
+    //     "rubocop": {
+    //         "useBundler": true // enable rubocop via bundler
+    //     },
+    //     "reek": {
+    //         "useBundler": true // enable reek via bundler
+    //     }
+    // },
+    // "ruby.format": "rubocop", // use rubocop for formatting
+    // "ruby.rubocop.executePath": "",
+    // "ruby.rubocop.onSave": true,
+    "[ruby]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "misogi.ruby-rubocop"
+    },
+    "[erb]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+    },
+}

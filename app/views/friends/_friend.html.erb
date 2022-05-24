@@ -1,17 +1,16 @@
 <tr>
-    <th scope="row" id="<%= dom_id friend %>">
-      <% if defined?index %>
-        <p><%= index+1 %></p>
-      <% else %>
-        <p></p>
-      <% end %>
-    </th>
-    <td><%= friend.first_name %></td>
-    <td><%= friend.last_name %></td>
-    <td><%= friend.email %></td>
-    <td><%= friend.phone %></td>
-    <td><%= friend.twitter %></td>
-    <td><%= link_to "Show", friend %></td>
-    <td><%= link_to "Edit", edit_friend_path(friend) %></td>
-    <td><%= link_to "Delete", @friend, :confirm => "Are you sure?", :method => :delete %></td>
+  <th scope="row" id="<%= dom_id friend %>">
+    <% if defined?index %>
+      <p><%= index+1 %></p>
+    <% else %>
+      <p></p>
+    <% end %>
+  </th>
+  <td>
+    <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
+  </td>
+  <td><%= friend.email %></td>
+  <td><%= friend.phone %></td>
+  <td><%= friend.twitter %></td>
+  <td><%= button_to "Remove", friend, method: :delete, data: { confirm: "Are you sure?" }, class:"btn btn-outline-danger btn-sm" %></td>
 </tr>

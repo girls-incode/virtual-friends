@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   resources :friends
-  root 'home#index'
   get 'home/about'
+  root 'friends#index'
   # get '/friends/:id' => 'friends#show'
 end
