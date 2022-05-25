@@ -77,3 +77,6 @@ Steps to deploy the app on Heroku:
 - make sure that Gemfile has `gem 'sqlite3', '~> 1.4'` only for development group and `gem 'pg', '~> 0.18.4'` in production group
 
 - run `bundle install --without production`
+
+- `git push heroku main`
+- `heroku run rails db:migrate`
