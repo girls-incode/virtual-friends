@@ -1,5 +1,12 @@
 # Friends App
 
+### Features
+
+- Sign Up
+- Sign In/Out
+- Add a friend
+- List user friends
+
 ## Run the app
 
 - Start the server
