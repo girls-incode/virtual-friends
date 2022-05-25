@@ -3,6 +3,6 @@ class HomeController < ApplicationController
   end
 
   def about
-    @title = 'Welcome to my page'
+    @title = 'What is this app about ?'
   end
 end

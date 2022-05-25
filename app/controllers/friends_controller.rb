@@ -6,6 +6,7 @@ class FriendsController < ApplicationController
   # GET /friends or /friends.json
   def index
     @friends = Friend.all
+    @title = 'The place for virtual friends...'
   end
 
   # GET /friends/1 or /friends/1.json
