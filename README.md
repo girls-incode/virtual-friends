@@ -58,3 +58,22 @@ rails console
 ## Run tests
 
 ## Deployment
+
+Steps to deploy the app on Heroku:
+
+- install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+    - `curl https://cli-assets.heroku.com/install-ubuntu.sh | sh`
+
+- `heroku login -i`
+
+- `heroku create`
+
+- `heroku apps:rename virtual-friends --app oldRandomAppName`
+
+- https://virtual-friends.herokuapp.com
+
+- `heroku keys:add`
+
+- make sure that Gemfile has `gem 'sqlite3', '~> 1.4'` only for development group and `gem 'pg', '~> 0.18.4'` in production group
+
+- run `bundle install --without production`
