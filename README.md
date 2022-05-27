@@ -61,27 +61,30 @@ rails console
 
 ### Steps to deploy on Heroku
 
-- `git push origin main`
+- Make sure all code is pushed in the remote repo: `git push origin main`
 
-- install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+- Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
     - `curl https://cli-assets.heroku.com/install-ubuntu.sh | sh`
 
 - `heroku login -i`
 
 - `heroku create`
 
-- `heroku apps:rename virtual-friends --app oldRandomAppName`
+- `heroku apps:rename virtual-friends --app theRandomGeneratedAppName`
 
-- https://virtual-friends.herokuapp.com
+- The app should be listed using: `heroku apps --all`
 
-- `heroku keys:add`
+- Check the app at `https://virtual-friends.herokuapp.com`
 
-- make sure that Gemfile has `gem 'sqlite3', '~> 1.4'` only for development group and `gem 'pg', '~> 0.18.4'` in production group
+- Add your public ssh key to heroku: `heroku keys:add`
 
-- run `bundle install --without production`
+- Make sure that Gemfile has `gem 'sqlite3', '~> 1.4'` only for development group and `gem 'pg', '~> 1.3', '>= 1.3.5'` in production group
 
-- `git push heroku main`
+- Run `bundle install --without production`
 
-- list apps: `heroku apps --all`
+- Push the code to heroku: `git push heroku main`
 
-- `heroku run rails db:migrate`
+- The app should be available at `https://virtual-friends.herokuapp.com/`.
+
+    Nagivating to https://virtual-friends.herokuapp.com/users/sign_in or /sign_up will give an error `We're sorry, but something went wrong.` That's because the production uses postgress and we didn't upload pg migration to heroku.
+    This should be done executing `heroku run rails db:migrate`.
