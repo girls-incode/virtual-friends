@@ -59,7 +59,7 @@ rails console
 
 ## Deployment
 
-Steps to deploy the app on Heroku:
+### Steps to deploy on Heroku
 
 - `git push origin main`
 
@@ -81,4 +81,7 @@ Steps to deploy the app on Heroku:
 - run `bundle install --without production`
 
 - `git push heroku main`
+
+- list apps: `heroku apps --all`
+
 - `heroku run rails db:migrate`
